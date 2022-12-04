@@ -1,0 +1,2 @@
+Microsoft.Entityframeworkcore.SqlServer
+Microsoft.Entityframeworkcore.Tools
