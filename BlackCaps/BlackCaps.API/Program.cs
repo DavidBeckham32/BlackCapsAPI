@@ -1,4 +1,5 @@
 using BlackCaps.API.Data;
+using BlackCaps.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,14 @@ builder.Services.AddDbContext<BlackCapsDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BlackCapsConnectionString"));
 });
+
+//adding DI for IRepository
+builder.Services.AddScoped<IRegionRepository , RegionRepository>();
+//after above line is written
+//we can use RegionRepository in our Controller
+
+//add Automapper here
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 

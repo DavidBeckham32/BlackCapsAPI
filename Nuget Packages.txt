@@ -1,2 +1,5 @@
 Microsoft.Entityframeworkcore.SqlServer
 Microsoft.Entityframeworkcore.Tools
+
+Automapper
+Automapper.Extensions.Microsoft.DependencyInjection
